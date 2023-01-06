@@ -31,6 +31,20 @@
       "StaticMarket": "0xa86AF1A5bB8AF2418500AAbdacB9B7d2217F91A5",
       "WyvernRegistry": "0x23d0a64aF6987A2d536B9c3bA72FAAf66c9D73b6",
       "WyvernExchange": "0xDBA99cE125C6140dC4b30D48cBdDc57Bc67dc2d1"
+    },
+    "lania": {
+      "Migrations": "0x93B45031c1b920feFB3E74Aed83acF645ab8907a",
+      "WyvernAtomicizer": "0xcE801E268DC3580a9d321AF80CB414F1cEFA8A90",
+      "WyvernStatic": "0x493AF83beEE6053Ec7BBf1c1A7Bce067fBde7fFd",
+      "StaticMarket": "0x24AF60aD8932EE37D2BD32E38c7eb09a6a628708",
+      "WyvernRegistry": "0x30588405EBae5BB24049A7795De49d3776b60E04",
+      "WyvernExchange": "0xe686CC93215fb7cE10B3Fc2F4570816464669d08"
+    },
+    "goerli": {
+      "Migrations": "0xcdf582aFeFA884D257ce7f82853dF9D517600487",
+      "WyvernAtomicizer": "0x9D2F0fEdd9BbB2aa55140f605b2c24d18287FcFA",
+      "WyvernStatic": "0x4204CB855f523e69379b6c4fe1bDd56b8243F9C3",
+      "StaticMarket": "0x787d2B5897aEcD17A2ED814149F7daC3F32eFB2B"
     }
   }
 }

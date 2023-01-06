@@ -1,8 +1,8 @@
 const Web3 = require('web3')
-const provider = new Web3.providers.HttpProvider('http://localhost:8545')
+const { testProvider, testChainId } = require('./cfg.js')
+const provider = new Web3.providers.HttpProvider(testProvider)
 var web3 = new Web3(provider)
 const { eip712Domain, structHash, signHash } = require('./eip712.js')
-
 
 // Truffle does not expose chai so it is impossible to add chai-as-promised.
 // This is a simple replacement function.
@@ -77,7 +77,7 @@ const structToSign = (order, exchange) => {
     domain: {
       name: 'Wyvern Exchange',
       version: '3.1',
-      chainId: 50,
+      chainId: testChainId,
       verifyingContract: exchange
     },
     data: order
@@ -170,7 +170,7 @@ const randomUint = () => {
 const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 const ZERO_BYTES32 = '0x0000000000000000000000000000000000000000000000000000000000000000'
 const NULL_SIG = {v: 27, r: ZERO_BYTES32, s: ZERO_BYTES32}
-const CHAIN_ID = 50
+const CHAIN_ID = testChainId
 
 module.exports = {
   hashOrder,

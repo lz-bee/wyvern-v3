@@ -7,7 +7,8 @@ const TestAuthenticatedProxy = artifacts.require('TestAuthenticatedProxy')
 const TestERC20 = artifacts.require('TestERC20')
 
 const Web3 = require('web3')
-const provider = new Web3.providers.HttpProvider('http://localhost:8545')
+const { testProvider } = require('./cfg.js')
+const provider = new Web3.providers.HttpProvider(testProvider)
 const web3 = new Web3(provider)
 
 const {increaseTime,increaseTimePromise,assertIsRejected} = require('./util')

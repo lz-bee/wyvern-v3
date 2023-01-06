@@ -10,7 +10,8 @@ const TestERC1271 = artifacts.require('TestERC1271')
 const TestSmartContractWallet = artifacts.require('TestSmartContractWallet')
 
 const Web3 = require('web3')
-const provider = new Web3.providers.HttpProvider('http://localhost:8545')
+const { testProvider } = require('./cfg.js')
+const provider = new Web3.providers.HttpProvider(testProvider)
 const web3 = new Web3(provider)
 
 const { wrap,hashOrder,ZERO_BYTES32,randomUint,NULL_SIG,assertIsRejected} = require('./util')

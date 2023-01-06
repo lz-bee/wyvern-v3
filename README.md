@@ -58,3 +58,7 @@ Edit [truffle.js](truffle.js) according to your deployment plans, then run:
 ```bash
 yarn run truffle deploy --network [network]
 ```
+
+```bash
+truffle migrate --reset --network lania
+```
