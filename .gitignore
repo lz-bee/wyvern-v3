@@ -7,3 +7,4 @@ temp/
 .DS_Store
 .nova/
 .env
+package-lock.json
