@@ -4,17 +4,7 @@ var HDWalletProvider = require('truffle-hdwallet-provider')
 var KlaytnHDWalletProvider = require('truffle-hdwallet-provider-klaytn')
 var Caver = require('caver-js')
 
-var rinkebyMnemonic = process.env.RINKEBY_MNEMONIC || ''
-var mumbaiMnemonic = process.env.MUMBAI_MNEMONIC || ''
-var mainnetMnemonic = process.env.MAINNET_MNEMONIC || ''
-var klaytnPrivateKey = process.env.KLAYTN_PRIVATE_KEY || ''
-var baobabPrivateKey = process.env.BAOBAB_PRIVATE_KEY || ''
-var infuraKey = process.env.INFURA_KEY || '';
-
-var kasAccessKeyId = process.env.KAS_ACCESS_KEY_ID || ''
-var kasSecretAccessKey = process.env.KAS_SECRET_KEY || ''
-
-var privateKey = '1a42f4b7f1a5bdf9272cba7923211018517c4d6248a865692c28d6c7b1c51a9b'
+var testPrivateKey = process.env.TEST_PRIVATE_KEY || ''
 
 module.exports = {
   mocha: {
@@ -23,7 +13,7 @@ module.exports = {
   networks: {
     mainnet: {
       provider: function () {
-        return new HDWalletProvider(mainnetMnemonic, 'https://mainnet.infura.io')
+        return new HDWalletProvider(testPrivateKey, 'https://mainnet.infura.io')
       },
       from: '',
       port: 8545,
@@ -39,7 +29,7 @@ module.exports = {
     },
     lania: {
       provider: function () {
-        return new HDWalletProvider(privateKey, 'https://rpc.lania.io')
+        return new HDWalletProvider(testPrivateKey, 'https://rpc.lania.io')
       },
       network_id: '2022',
       gasPrice: 30000000000,
@@ -58,13 +48,6 @@ module.exports = {
       gasPrice: 1500000000,
       confirmations: 2,
       skipDryRun: true
-    },
-    mumbai: {
-      provider: function () {
-        return new HDWalletProvider(mumbaiMnemonic, 'https://rpc-mumbai.matic.today')
-      },
-      from: '',
-      network_id: '80001'
     },
   },
   compilers: {

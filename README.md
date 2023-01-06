@@ -53,7 +53,7 @@ yarn analyze
 
 #### Deployment
 
-Edit [truffle.js](truffle.js) according to your deployment plans, then run:
+Edit [truffle-config.js](truffle-config.js) according to your deployment plans, then run:
 
 ```bash
 yarn run truffle deploy --network [network]
