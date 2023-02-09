@@ -11,7 +11,8 @@ const chainIds = {
   mumbai: 80001,
   main: 1,
   goerli: 5,
-  lania: 2022
+  lania: 2022,
+  bsc: 97
 }
 
 const personalSignPrefixes = {
@@ -23,7 +24,7 @@ const personalSignPrefixes = {
 module.exports = async (deployer, network) => {
   const personalSignPrefix = personalSignPrefixes[network] || personalSignPrefixes['default']
   await deployer.deploy(WyvernRegistry)
-  await deployer.deploy(WyvernExchange, chainIds[network], [WyvernRegistry.address, '0xa5409ec958C83C3f309868babACA7c86DCB077c1'], Buffer.from(personalSignPrefix,'binary'))
+  await deployer.deploy(WyvernExchange, chainIds[network], [WyvernRegistry.address, '0x0000000000000000000000000000000000000000'], Buffer.from(personalSignPrefix,'binary'))
   if (network !== 'development') {
     setConfig('deployed.' + network + '.WyvernRegistry', WyvernRegistry.address)
     setConfig('deployed.' + network + '.WyvernExchange', WyvernExchange.address)

@@ -61,4 +61,16 @@ yarn run truffle deploy --network [network]
 
 ```bash
 truffle migrate --reset --network lania
+truffle migrate --reset --compile-none --network goerli
+truffle migrate --reset --compile-none --network bsc
 ```
+
+用第三方rpc节点（eth, bsc）需要注意，因为第三方有速率限制，需要把以下的timeout时间调大点：
+
+1、./node_modules/eth-block-tracker/src/polling.js
+第11行，const pollingInterval = opts.pollingInterval || 20 * sec  改为  const pollingInterval = 600 * sec
+
+2、./node_modules/@truffle/hdwallet-provider/node_modules/@trufflesuite/web3-provider-engine/subproviders/rpc.js
+第34行，timeout: 20000  改成  timeout: 1800000
+
+3、

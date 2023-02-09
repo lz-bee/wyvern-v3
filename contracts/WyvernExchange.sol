@@ -18,7 +18,7 @@ contract WyvernExchange is Exchange {
   
     string public constant version = "3.1";
 
-    string public constant codename = "Ancalagon";
+    string public constant codename = "Lania";
 
     constructor (uint chainId, address[] memory registryAddrs, bytes memory customPersonalSignPrefix) public {
         DOMAIN_SEPARATOR = hash(EIP712Domain({

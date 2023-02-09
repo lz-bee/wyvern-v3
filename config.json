@@ -45,6 +45,14 @@
       "WyvernAtomicizer": "0x9D2F0fEdd9BbB2aa55140f605b2c24d18287FcFA",
       "WyvernStatic": "0x4204CB855f523e69379b6c4fe1bDd56b8243F9C3",
       "StaticMarket": "0x787d2B5897aEcD17A2ED814149F7daC3F32eFB2B"
+    },
+    "bsc": {
+      "Migrations": "0x5bd2865dE628189E8a7d267ae9e158bAB44594f8",
+      "WyvernAtomicizer": "0xe4cB8550eE2ac6e580A2C9B02eC9512eefEA491c",
+      "WyvernStatic": "0x010Af034FeB00E6779640f9940c87b97d814113d",
+      "StaticMarket": "0xC89e48dB70114a4E74C941FBF2CBd7F8dd24Cdd8",
+      "WyvernRegistry": "0x0DC8b5254C12eE7Db8124B4c9Ec1A6F978AB53E1",
+      "WyvernExchange": "0x06524e63d2D27FCbefC2E47B4a0851e5F9a8c74d"
     }
   }
 }

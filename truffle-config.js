@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-var HDWalletProvider = require('truffle-hdwallet-provider')
+var HDWalletProvider = require('@truffle/hdwallet-provider')
 var KlaytnHDWalletProvider = require('truffle-hdwallet-provider-klaytn')
 var Caver = require('caver-js')
 
@@ -39,13 +39,27 @@ module.exports = {
     },
     goerli: {
       provider: function () {
-        return new HDWalletProvider(privateKey, 'https://goerli.infura.io/v3/1399dbdb1895420fada84e71498e66b8')
+        return new HDWalletProvider(testPrivateKey, 'https://multi-practical-arrow.ethereum-goerli.discover.quiknode.pro/23600c9f07b2a193b57236fc184eeb2b8af51437/')
       },
       from: '0x9758494f8a43D5F732c195c98d62584eC2b13310',
       network_id: '5',
       gas: 30000000,
-      networkCheckTimeout: 10000,
+      networkCheckTimeout: 1800000,
+      timeoutBlocks: 1800000,
       gasPrice: 1500000000,
+      confirmations: 2,
+      skipDryRun: true
+    },
+    bsc: {
+      provider: function () {
+        return new HDWalletProvider(testPrivateKey, 'https://patient-virulent-crater.bsc-testnet.discover.quiknode.pro/add149f8ba6543ddca90518738ab9ed33520423a/')
+      },
+      from: '0x9758494f8a43D5F732c195c98d62584eC2b13310',
+      network_id: '97',
+      gas: 30000000,
+      networkCheckTimeout: 1800000,
+      timeoutBlocks: 1800000,
+      gasPrice: 30000000000,
       confirmations: 2,
       skipDryRun: true
     },
