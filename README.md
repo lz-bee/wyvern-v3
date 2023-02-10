@@ -72,5 +72,3 @@ truffle migrate --reset --compile-none --network bsc
 
 2、./node_modules/@truffle/hdwallet-provider/node_modules/@trufflesuite/web3-provider-engine/subproviders/rpc.js
 第34行，timeout: 20000  改成  timeout: 1800000
-
-3、

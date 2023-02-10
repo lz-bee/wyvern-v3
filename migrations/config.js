@@ -24,8 +24,30 @@ const setConfig = (path, val) => {
   })
 }
 
+const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
+
+const chainIds = {
+  development: 50,
+  coverage: 50,
+  rinkeby: 4,
+  mumbai: 80001,
+  main: 1,
+  goerli: 5,
+  lania: 2022,
+  bsc: 97
+}
+
+const personalSignPrefixes = {
+  default: "\x19Ethereum Signed Message:\n",
+  klaytn: "\x19Klaytn Signed Message:\n",
+  baobab: "\x19Klaytn Signed Message:\n"
+}
+
 module.exports = {
   getConfig,
   setConfig,
-  updateConfig
+  updateConfig,
+  chainIds,
+  personalSignPrefixes,
+  ZERO_ADDRESS
 }
